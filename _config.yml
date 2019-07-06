@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dongmin's Blog"
+title                    : "Josh's Blog"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Josh D. Lee"
 description              : "An amazing website."
 url                      : "https://ldm903.github.io"
 baseurl                  : ""
@@ -106,7 +106,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Josh D. Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
   location         : "Seoul, South Korea"
@@ -114,7 +114,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: mailto:your.name@email.com
+      url: mailto:ldm903@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
