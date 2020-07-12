@@ -1,30 +1,24 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="section">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-        <p class="post-meta">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-            {{ page.date | date: date_format }}
-          </time>
-          {% if page.author %}
-            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-          {% endif %}</p>
-      </header>
+<div class="content">
 
-      <div class="post-content" itemprop="articleBody">
-        {{ content }}
-      </div>
+    <p>Published: {{ page.date | date: "%b %-d, %Y" }} by {{ page.author }}</p>
 
-      {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-      {% endif %}
-    </article>
-    </div>
+    {{ content }}
 </div>
-<script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
+
+<div class="tags">
+    {% for tag in page.tags %}
+    <span class="tag is-primary">{{ tag }}</span>
+    {% endfor %}
+</div>
+
+{% unless site.hide_share_buttons %}
+{% include share-buttons.html %}
+{% endunless %}
+
+{% if site.disqus.shortname %}
+  {% include disqus.html %}
+{% endif %}
